@@ -5,7 +5,7 @@
 }
 
 p::selection, h1::selection {
-   background: brown;
+   background: red;
 }
 
 body {
@@ -55,7 +55,7 @@ body {
  }
 
  .container {
-    width: 60%;
+    width: 50%;
     margin: auto;
     text-align: center;
     border: solid 2px transparent;
@@ -81,11 +81,9 @@ body {
     padding: .5rem;
  }
  
- .display-grid {
-   display: grid;
-   grid-template-areas: 1fr 1fr;
-   grid-template-areas: "description image";
-   grid-template-columns: 50% 50%;
+ .display-flex {
+   display: flex;
+   flex-direction: column;
  }
 
  .description{
@@ -142,6 +140,7 @@ enquanto não estiverem selecionadas */
 /* Customizações de estilo e de comportamento dos labels,
 que fazem o papel dos radio buttons do carrossel */
 .botao:focus {
+
 }
 .labels {
     z-index: 1;
@@ -201,23 +200,83 @@ mudam a aparência */
 }
 
  
- @media only screen and (max-width: 600px) {
-   header h1 {
-       font-size: 24px;
-   }
+@media(max-width: 1340px) {
+    header .title-description {
+        font-size: 1.2rem
+    }
+    .container {
+        width: 50%;
+        padding: 2rem;
+    }
+    .display-grid {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media only screen and (max-width: 800px) {
-   .container {
-       width: 100%;
-   }
-   .container img, .footer-images img {
-       width: 100%;
-   }
+@media(max-width: 1160px) {
+    header .title-description {
+        top: 50%
+    }
+}
+@media(max-width: 1137px) {
+    header .title-description {
+        top: 45%
+    }
+}
+@media(max-width: 993px) {
+    header .title-description {
+        top: 40%;
+    }
+    header {
+        padding-bottom: 5rem;
+    }
+}
+@media(max-width: 884px) {
+    header .title-description {
+        top: 35%;
+        font-size: 1rem;
+    }
+    header {
+        padding-bottom: 3rem;
+    }
+}
+@media(max-width: 726px) {
+    header .title-description {
+        top: 40%;
+        font-size: .90rem;
+    }
+    .container p {
+        font-size: 3rem;
+    }
+    header .title-description h1 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
 }
 
-@media only screen and (max-width: 1024px) {
-   .footer-images img {
-       width: 50%;
-   }
+@media(max-width: 596px) {
+    .container {
+        margin-top: 4rem;
+    }
+    .container p {
+        font-size: 2rem;
+    }
+    .container span {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+    main {
+        gap: .5rem;
+    }
+}
+
+@media(max-width: 493px) {
+    header .title-description h1 {
+        font-size: 1rem;
+        padding-bottom: .5rem;
+    }
+    header .title-description p {
+        font-size: .80rem;
+    }
 }
